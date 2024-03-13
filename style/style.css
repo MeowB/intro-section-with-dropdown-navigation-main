@@ -83,6 +83,17 @@ header .wrapper nav a {
 header .wrapper nav a img {
   width: 32px;
 }
+header .wrapper nav ul {
+  text-align: left;
+}
+header .wrapper nav ul a {
+  text-decoration: none;
+  margin-left: 0;
+  color: dimgray;
+}
+header .wrapper nav ul a:hover {
+  color: #141414;
+}
 header .wrapper nav ul li {
   padding: 10px 0;
 }
@@ -105,16 +116,26 @@ header .wrapper nav .nav-btns button {
   padding: 15px 0;
   cursor: pointer;
 }
+header .wrapper nav .nav-btns button:hover {
+  color: #141414;
+}
 header .wrapper nav .nav-btns button:last-child {
   border: 2px solid dimgray;
   border-radius: 20px;
+}
+header .wrapper nav .nav-btns button:last-child:hover {
+  border: 2px solid #141414;
+  color: #141414;
 }
 
 main {
   width: 100%;
 }
-main .hero-img {
+main .hero-img-mobile {
   width: 100%;
+}
+main .hero-img-desktop {
+  display: none;
 }
 main .text-content {
   text-align: center;
@@ -124,6 +145,9 @@ main .text-content {
 main .text-content h1 {
   font-size: 34px;
   padding-top: 50px;
+}
+main .text-content h1 br {
+  display: none;
 }
 main .text-content p {
   padding-top: 30px;
@@ -153,10 +177,111 @@ main .clients img {
 }
 
 footer {
-  position: absolute;
-  width: 100%;
-  margin: auto;
-  bottom: 0;
+  margin-top: 80px;
+}
+
+@media only screen and (min-width: 800px) {
+  header #navbar #hamburger {
+    display: none;
+  }
+  header .wrapper {
+    display: flex;
+    height: 67px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  header .wrapper nav {
+    background-color: white;
+    flex-direction: row;
+    height: 67px;
+    width: calc(100% - 150px);
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    left: 150px;
+  }
+  header .wrapper nav #features-btn, header .wrapper nav #company-btn {
+    background-color: white;
+  }
+  header .wrapper nav #features-btn:hover, header .wrapper nav #company-btn:hover {
+    color: #141414;
+    cursor: pointer;
+  }
+  header .wrapper nav #features-items, header .wrapper nav #company-items {
+    margin-top: 20px;
+    position: absolute;
+    background-color: #fafafa;
+    box-shadow: 5px 5px 25px #141414;
+    border-radius: 15px;
+    right: 0;
+  }
+  header .wrapper nav #x-mark {
+    display: none;
+  }
+  header .wrapper nav ul {
+    display: flex;
+  }
+  header .wrapper nav ul li {
+    padding: 10px 20px;
+  }
+  header .wrapper nav .nav-btns {
+    flex-direction: row;
+  }
+  header .wrapper nav .nav-btns button {
+    background-color: white;
+    margin: 0 15px;
+  }
+  header .wrapper nav .nav-btns button:last-child {
+    padding: 15px 25px;
+  }
+
+  main {
+    display: flex;
+    height: calc(100vh - 79px);
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  main img {
+    width: 30%;
+  }
+  main .wrapper {
+    width: 40%;
+    padding-right: 80px;
+  }
+  main .wrapper .text-content {
+    text-align: left;
+  }
+  main .wrapper .text-content h1 {
+    font-size: 74px;
+  }
+  main .wrapper .text-content h1 br {
+    display: block;
+  }
+  main .wrapper .text-content p {
+    font-size: 18px;
+    padding: 80px 0;
+  }
+  main .wrapper .text-content button {
+    border: 1px solid transparent;
+  }
+  main .wrapper .text-content button:hover {
+    background-color: #fafafa;
+    border: 1px solid #141414;
+    color: #000000;
+  }
+  main .hero-img-desktop {
+    display: inline;
+  }
+  main .hero-img-mobile {
+    display: none;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

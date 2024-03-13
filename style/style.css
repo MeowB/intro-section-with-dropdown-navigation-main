@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, button {
+  font-family: Epilogue, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+#features-dropdown, #company-dropdown {
+  position: relative;
+}
+
+#features-items, #company-items {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+#features-items.show, #company-items.show {
+  display: block;
+}
+
+header {
+  position: relative;
+}
+header #navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+header #navbar img:first-child {
+  height: 27px;
+}
+header #navbar a {
+  cursor: pointer;
+}
+header #navbar img:last-child {
+  height: 18px;
+}
+header .wrapper {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(20, 20, 20, 0.6);
+}
+header .wrapper nav {
+  background-color: #fafafa;
+  position: absolute;
+  right: 0;
+  width: 65%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: dimgray;
+  font-weight: 500;
+}
+header .wrapper nav button {
+  color: dimgray;
+  background-color: #fafafa;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+header .wrapper nav button img {
+  padding-left: 15px;
+}
+header .wrapper nav a {
+  margin-left: auto;
+}
+header .wrapper nav a img {
+  width: 32px;
+}
+header .wrapper nav ul li {
+  padding: 10px 0;
+}
+header .wrapper nav ul #features-dropdown ul, header .wrapper nav ul #company-dropdown ul {
+  padding: 20px 0;
+}
+header .wrapper nav ul #features-dropdown ul li, header .wrapper nav ul #company-dropdown ul li {
+  padding-left: 30px;
+  display: flex;
+}
+header .wrapper nav ul #features-dropdown ul li img, header .wrapper nav ul #company-dropdown ul li img {
+  padding-right: 15px;
+  width: 18px;
+}
+header .wrapper nav .nav-btns {
+  display: flex;
+  flex-direction: column;
+}
+header .wrapper nav .nav-btns button {
+  padding: 15px 0;
+  cursor: pointer;
+}
+header .wrapper nav .nav-btns button:last-child {
+  border: 2px solid dimgray;
+  border-radius: 20px;
+}
+
+main {
+  width: 100%;
+}
+main .hero-img {
+  width: 100%;
+}
+main .text-content {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+main .text-content h1 {
+  font-size: 34px;
+  padding-top: 50px;
+}
+main .text-content p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: dimgray;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+main .text-content button {
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #141414;
+  color: #fafafa;
+  font-weight: 700;
+}
+main .clients {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 80px;
+}
+main .clients img {
+  width: 20%;
+  height: auto;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
